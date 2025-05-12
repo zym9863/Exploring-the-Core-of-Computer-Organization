@@ -1,0 +1,126 @@
+:root {
+  /* 主色调 */
+  --primary-color: #3f51b5;
+  --primary-light: #757de8;
+  --primary-dark: #002984;
+  --secondary-color: #ff9800;
+  --secondary-light: #ffc947;
+  --secondary-dark: #c66900;
+
+  /* 文本颜色 */
+  --text-primary: #333333;
+  --text-secondary: #666666;
+  --text-light: #ffffff;
+
+  /* 背景颜色 */
+  --bg-primary: #ffffff;
+  --bg-secondary: #f5f5f5;
+  --bg-tertiary: #e0e0e0;
+
+  /* 组件颜色 */
+  --cpu-color: #ff9800;
+  --memory-color: #2196f3;
+  --input-color: #4caf50;
+  --output-color: #9c27b0;
+  --storage-color: #ffc107;
+
+  /* 其他 */
+  --border-radius: 8px;
+  --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --transition-speed: 0.3s;
+
+  font-family: "Microsoft YaHei", "微软雅黑", system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+  font-weight: 400;
+  font-size: 16px;
+
+  color-scheme: light;
+  color: var(--text-primary);
+  background-color: var(--bg-primary);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  font-weight: 500;
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: color var(--transition-speed) ease;
+}
+
+a:hover {
+  color: var(--primary-light);
+  text-decoration: underline;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: var(--bg-secondary);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text-primary);
+  line-height: 1.2;
+  margin-bottom: 0.5em;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+  color: var(--primary-dark);
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+button {
+  border-radius: var(--border-radius);
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: var(--primary-color);
+  color: var(--text-light);
+  cursor: pointer;
+  transition: all var(--transition-speed) ease;
+}
+
+button:hover {
+  background-color: var(--primary-dark);
+  transform: translateY(-2px);
+  box-shadow: var(--box-shadow);
+}
+
+button:focus,
+button:focus-visible {
+  outline: 2px solid var(--primary-light);
+  outline-offset: 2px;
+}
+
+button:disabled {
+  background-color: var(--bg-tertiary);
+  color: var(--text-secondary);
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
